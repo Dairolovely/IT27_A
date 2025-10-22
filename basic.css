@@ -1,14 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: #4982ba;
+  color: #b79b9b;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #5b5e60;
+  background-color: #1e6696;
   color: white;
   padding: 20px 0;
 }
@@ -31,7 +31,7 @@ section {
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #171718;
+  background-color: #353579;
   color: white;
   border: none;
   border-radius: 5px;
@@ -40,5 +40,5 @@ button {
 }
 
 button:hover {
-  background-color: #4a4d4f;
+  background-color: #6e8593;
 }
