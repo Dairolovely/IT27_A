@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="basic.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #bda9d4ef;
+      color: #323131;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e2e2e;
+      color: #e4dede;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #d1b9d1;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      background-color: #bc80e3;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #5a8b8b;
+      color: rgb(41, 7, 7);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #533e67;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="home.html">About Me</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <img src="https://i.postimg.cc/Jz3jJPvd/68a95d7a-bc68-4cc8-b500-8467b626c610.jpg" alt="Lovely Joy">
+    <h2>Who Am I?</h2>
+    <p>Hola! <strong>Lovely Joy Dairo, 20 years of age</strong>. I love singing, cooking, and I also love to travel.</p>
+
+    <p id="funFact">Click the button below to see a fun fact about me!</p>
+    <button id="funBtn">Show Fun Fact</button>
+  </section>
+
+  <script>
+    const funBtn = document.getElementById('funBtn');
+    const funFact = document.getElementById('funFact');
+
+    funBtn.addEventListener('click', () => {
+      funFact.textContent = "Fun Fact: I enjoy coding websites and learning new skills!";
+    });
+  </script>
+</body>
+</html>

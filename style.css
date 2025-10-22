@@ -1,0 +1,60 @@
+/* General body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5e6ff;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 20px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section styling */
+section {
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #d9b3ff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #6c3483;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7d5ba6;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #8e44ad;
+  color: white;
+}
