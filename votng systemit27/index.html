@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- WELCOME PAGE -->
+  <div id="welcomePage" class="screen active">
+    <div class="content">
+      <h1><b>Welcome</b><br>to the<br><b>Online Voting</b></h1>
+      <button onclick="showPage('loginPage')">Proceed to login</button>
+    </div>
+  </div>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="screen">
+    <div class="content">
+      <h2>Voter Login</h2>
+      <form onsubmit="event.preventDefault(); showPage('barangayPage')">
+        <label>Voter’s Name</label>
+        <input type="text" placeholder="Enter your name" required>
+        
+        <label>Voter’s ID/Password</label>
+        <input type="password" placeholder="Enter your ID" required>
+        
+        <button type="submit">Login</button>
+      </form>
+      <p class="note">Your information is secured and verified.</p>
+    </div>
+  </div>
+
+  <!-- BARANGAY PAGE -->
+  <div id="barangayPage" class="screen">
+    <div class="content">
+      <h2>Select Barangay</h2>
+      <select required>
+        <option value="">-- Select Barangay --</option>
+        <option>Barangay Mantibugao</option>
+        <option>Barangay Alae</option>
+        <option>Barangay Tankulan</option>
+      </select>
+      <button onclick="showPage('zonePage')">Next</button>
+    </div>
+  </div>
+
+  <!-- ZONE PAGE -->
+  <div id="zonePage" class="screen">
+    <div class="content">
+      <h2>Select Zone</h2>
+      <select required>
+        <option value="">-- Select Zone --</option>
+        <option>Zone 1</option>
+        <option>Zone 2</option>
+        <option>Zone 3</option>
+      </select>
+      <button onclick="showPage('voteWiselyPage')">Continue to vote</button>
+    </div>
+  </div>
+
+  <!-- VOTE WISELY PAGE -->
+  <div id="voteWiselyPage" class="screen">
+    <div class="content">
+      <h2>Please Vote Wisely!</h2>
+      <button onclick="showPage('votePage')">Start Voting</button>
+    </div>
+  </div>
+
+  <!-- VOTING PAGE -->
+  <div id="votePage" class="screen">
+    <div class="content">
+      <h3>Choose 1 Kapitan</h3>
+      <label><input type="radio" name="kapitan" value="Raul Rodriguez"> Raul Rodriguez</label><br>
+      <label><input type="radio" name="kapitan" value="Elena Yu"> Elena Yu</label>
+
+      <h3>Kagawad (Choose up to 3)</h3>
+      <label><input type="checkbox" value="Maria Flor"> Maria Flor</label><br>
+      <label><input type="checkbox" value="Lovely Dairo"> Lovely Dairo</label><br>
+      <label><input type="checkbox" value="Elieza Dajang"> Elieza Dajang</label><br>
+      <label><input type="checkbox" value="Meya Divino"> Meya Divino</label><br>
+      <label><input type="checkbox" value="Michaella Renojo"> Michaella Renojo</label><br>
+
+      <button onclick="reviewVotes()">Review my Votes</button>
+    </div>
+  </div>
+
+  <!-- REVIEW PAGE -->
+  <div id="reviewPage" class="screen">
+    <div class="content">
+      <h2>Review</h2>
+      <p><b>Kapitan:</b> <span id="reviewKapitan"></span></p>
+      <p><b>Kagawad:</b> <span id="reviewKagawad"></span></p>
+      <button onclick="showPage('thankYouPage')">Submit</button>
+    </div>
+  </div>
+
+  <!-- THANK YOU PAGE -->
+  <div id="thankYouPage" class="screen">
+    <div class="content">
+      <h2>Thank you for Voting!</h2>
+      <button onclick="showPage('welcomePage')">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
